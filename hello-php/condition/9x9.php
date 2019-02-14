@@ -1,4 +1,4 @@
-<h1>9 X 9 Table</h1>
+<h1>A Weird 9 X 9 Table</h1>
 <table border="2">
 	<?php
 	for($j=1;$j<=9;$j++){
@@ -10,9 +10,15 @@
 		    if($i==1){
 		        continue;
 		    }else{
-		        ?>
-		        <td><?php echo $i;?></td>
-		        <?php
+		        if($j==1){
+		            ?>
+		        	<td><?php echo $i;?></td>
+		        	<?php
+		        }else{
+		            ?>
+		            <td><?php echo $j*$i;?></td>
+		            <?php
+		        }
 		    }
 		}
 		?>
