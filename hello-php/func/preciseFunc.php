@@ -39,3 +39,11 @@ echo "<br>";
 changeRealParam($n);
 echo $n;
 ?>
+<h3>Default Params</h3>
+<?php
+function getArea(int $width=7,int $height=13){
+    return $width*$height;
+}
+echo "<p>5*3=".getArea(5,3)."</p>";
+echo getArea();
+?>
