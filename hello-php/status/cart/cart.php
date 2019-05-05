@@ -10,7 +10,14 @@ $list=$_SESSION["list"];
 </head>
 <body>
 	<h1>Your Cart</h1>
-	<table>
+	<?php
+	if($list==0){
+	    ?>
+	    <h2>You didn't add anything to your cart.</h2>
+	    <?php
+	}else{
+	?>
+	<table border="2">
 		<tr>
 			<td>Function</td>
 			<td>Serial No.</td>
@@ -22,7 +29,7 @@ $list=$_SESSION["list"];
 		    ?>
 		    <tr>
 		    	<td>Remove</td>
-		    	<td><?php echo $i;?></td>
+		    	<td><?php echo $i+1;?></td>
 		    	<td><?php echo $_COOKIE[$i."_name"]?></td>
 		    	<td><?php echo $_COOKIE[$i."_qt"]?></td>
 		    </tr>
@@ -30,5 +37,8 @@ $list=$_SESSION["list"];
 		}
 		?>
 	</table>
+	<?php
+	}
+	?>
 </body>
 </html>
